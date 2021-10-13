@@ -74,6 +74,14 @@ public class Costume implements Serializable{
     public void setId_cat(Integer id_cat) {
         this.id_cat = id_cat;
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
         
         
         

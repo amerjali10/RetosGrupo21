@@ -49,13 +49,13 @@ public class Category implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-/*
-    public List<Custome> getCostumes() {
+
+    public List<Costume> getCostumes() {
         return costumes;
     }
 
-    public void setCostumes(List<Custome> costumes) {
+    public void setCostumes(List<Costume> costumes) {
         this.costumes = costumes;
     }
-  */  
+
 }
