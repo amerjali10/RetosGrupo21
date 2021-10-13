@@ -19,7 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
+ * Esta clase fue diseñada ei mplementada por:
  * @author JaliNet
  */
 @Entity
