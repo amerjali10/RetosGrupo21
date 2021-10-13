@@ -29,11 +29,11 @@ public class Category implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
         private String name;
-/*
+
         @OneToMany(cascade={CascadeType.PERSIST},mappedBy= "category")
         @JsonIgnoreProperties("category")
-        private List<Custome>  costumes;
-*/
+        private List<Costume>  costumes;
+
     public Integer getId() {
         return id;
     }
