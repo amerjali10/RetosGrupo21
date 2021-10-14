@@ -28,7 +28,7 @@ public class Costume implements Serializable{
         private String name;
         private String brand;
         private Integer model;
-        private Integer id_cat;
+        
 
         @ManyToOne
         @JoinColumn(name="categoryId")
@@ -67,13 +67,6 @@ public class Costume implements Serializable{
         this.model = model;
     }
 
-    public Integer getId_cat() {
-        return id_cat;
-    }
-
-    public void setId_cat(Integer id_cat) {
-        this.id_cat = id_cat;
-    }
 
     public Category getCategory() {
         return category;
