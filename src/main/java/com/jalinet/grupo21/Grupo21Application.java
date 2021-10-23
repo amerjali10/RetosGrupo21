@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Grupo21Application {
 
-	public static void main(String[] args) {
+	public static void main_2(String[] args) {
 		SpringApplication.run(Grupo21Application.class, args);
 	}
 

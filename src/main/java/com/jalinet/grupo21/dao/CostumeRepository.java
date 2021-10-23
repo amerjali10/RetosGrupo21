@@ -27,4 +27,6 @@ public class CostumeRepository {
   
   public Costume save(Costume costume) { return costumeCrudRepository.save(costume);};
     
+  public void delete(Costume custome ) {costumeCrudRepository.delete(custome);};
+
 }

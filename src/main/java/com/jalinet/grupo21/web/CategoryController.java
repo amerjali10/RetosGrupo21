@@ -11,6 +11,7 @@ import com.jalinet.grupo21.servicios.CategoryService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +20,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+ *  
  * @author JaliNet
  */
 @RestController
@@ -43,14 +45,14 @@ public class CategoryController {
 
 //    @CrossOrigin(origins = "http://132.226.240.254")
     @PostMapping("/save")
-      public Category save(@RequestBody Category category) {return categoryService.save(category);};
+    @ResponseStatus(HttpStatus.CREATED )
+    public Category save(@RequestBody Category category) {return categoryService.save(category);};
 
-/*
     @PutMapping("/update")
-      public Category update(@RequestBody Category category) {return categoryService.update(category);};
-
+    @ResponseStatus(HttpStatus.CREATED )
+    public Category update(@RequestBody Category category) {return categoryService.update(category);};
 
     @DeleteMapping("/{id}")
-      public void delete(@PathVariable("id") int categoryId) {categoryService.deleteCategory(categoryId);};
-  */    
+    @ResponseStatus(HttpStatus.NO_CONTENT )
+    public void delete(@PathVariable("id") int categoryId) {categoryService.deleteCategory(categoryId);};
 }
