@@ -1,6 +1,6 @@
 function traerInformacion(){
 	$.ajax({    
-    url : 'http://132.226.240.254/api/Custome/all',
+    url : 'http://localhost/api/Custome/all',
     type : 'GET',
     dataType : 'json',
     contentType: "application/json; charset=utf-8",
@@ -46,7 +46,7 @@ function guardarInformacion(){
 		};
 		let datosJson = JSON.stringify(misDatos); 
 		$.ajax(    
-		'http://132.226.240.254/api/Custome/save',
+		'http://localhost/api/Custome/save',
 		{data: datosJson,
 		type : 'POST',
 		dataType : 'json',
@@ -74,13 +74,13 @@ function guardarInformacion(){
 
 function editarRegistro (id){
 	$.ajax({    
-    url : 'http://132.226.240.254/api/Custome/'+id,
+    url : 'http://localhost/api/Custome/'+id,
     type : 'GET',
     dataType : 'json',
     contentType: "application/json; charset=utf-8",
   
     success : function(respuesta) {
-		console.log(respuesta+ "url" + "http://132.226.240.254/api/Custome/"+id);
+		console.log(respuesta+ "url" + "http://localhost/api/Custome/"+id);
         let miTabla = '<table>';
 			$("#brand").val(respuesta.brand);
 			$("#category").val(respuesta.id_cat);
@@ -108,7 +108,7 @@ function actualizarInformacion(){
 	let datosJson = JSON.stringify(misDatos); 
 
 	$.ajax(    
-    'http://132.226.240.254/api/Custome/update',
+    'http://localhost/api/Custome/update',
 	{data: datosJson,
     type : 'PUT',
     dataType : 'json',
@@ -131,7 +131,7 @@ function actualizarInformacion(){
 
 function pintarSelect(idCat){
 	$.ajax({    
-    url : 'http://132.226.240.254/api/Category/all',
+    url : 'http://localhost/api/Category/all',
     type : 'GET',
     dataType : 'json',
     contentType: "application/json; charset=utf-8",
@@ -160,10 +160,10 @@ function pintarSelect(idCat){
 }	
 
 function eliminarRegistro (id){
- 
+    alert("registro Eliminado No:"+id);
 
 	$.ajax({    
-    url : 'http://132.226.240.254/api/Custome/'+id,
+    url : 'http://localhost/api/Custome/'+id,
     type : 'DELETE',
     dataType : 'json',
     contentType: "application/json; charset=utf-8",
