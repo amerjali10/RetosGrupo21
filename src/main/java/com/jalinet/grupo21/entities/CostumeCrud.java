@@ -5,6 +5,8 @@
  */
 package com.jalinet.grupo21.entities;
 
+import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -14,4 +16,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CostumeCrud extends CrudRepository<Costume, Integer> {
     
+     @Query ("SELECT c.category, COUNT(c.category) from Costume AS c group by c.category order by COUNT(c.category) DESC")
+     public List<Object[]> countTotalCustomeByCategory();
+
 }

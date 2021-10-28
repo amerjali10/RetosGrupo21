@@ -29,4 +29,8 @@ public class CostumeRepository {
     
   public void delete(Costume custome ) {costumeCrudRepository.delete(custome);};
 
+    public List<Object[]> getTopByCategory(){
+        return costumeCrudRepository.countTotalCustomeByCategory();
+    }
+
 }

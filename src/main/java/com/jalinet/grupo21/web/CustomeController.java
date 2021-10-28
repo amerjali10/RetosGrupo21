@@ -7,6 +7,7 @@ package com.jalinet.grupo21.web;
 
 import com.jalinet.grupo21.servicios.*;
 import com.jalinet.grupo21.entities.Costume;
+import com.jalinet.grupo21.entities.custom.CategoryAmount;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,11 @@ public class CustomeController {
       public void delete(@PathVariable("id") int customeId) {
           customeService.deleteCustome(customeId);
       }
+   //Report!
+    @GetMapping("/report")
+    public List<CategoryAmount> getReport(){
+        return customeService.getTopCustomeByCategory();
+    }
       
    
 }
